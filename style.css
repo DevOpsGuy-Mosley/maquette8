@@ -109,7 +109,7 @@ body {
             position: absolute;
             top: calc(100% + 5px); 
             left: 50%;
-            transform: translateX(-50%) translateY(-10px);
+            transform: translateX(-50%) translateY(0);
             min-width: 780px; 
             background-color: #f8f9fa;
             border-radius: 16px;
@@ -120,7 +120,7 @@ body {
             transition: opacity 0.4s ease, transform 0.4s ease;
             text-align: left; 
         }
-        .nav-links li:hover > .dropdown-menu,
+        .nav-links li.open > .dropdown-menu,
         .lang-switcher-container:hover .dropdown-menu {
             display: block;
             opacity: 1;

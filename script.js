@@ -105,4 +105,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     mobileActionsArea.appendChild(mobileOpenAccBtn);
                 }
             }
+
+            // New code to control dropdown hover with delay
+            if (desktopNavLinks) {
+                desktopNavLinks.querySelectorAll(':scope > li').forEach(item => {
+                    let timeoutId;
+
+                    item.addEventListener('mouseenter', () => {
+                        clearTimeout(timeoutId);
+                        item.classList.add('open');
+                    });
+
+                    item.addEventListener('mouseleave', () => {
+                        timeoutId = setTimeout(() => {
+                            item.classList.remove('open');
+                        }, 200);
+                    });
+                });
+            }
         });
